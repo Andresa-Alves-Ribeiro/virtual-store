@@ -33,16 +33,16 @@ export default function Header() {
                 </div>
 
                 <div className="flex gap-3">
-                    <button className="flex gap-2 items-center text-sm px-3 rounded-xl bg-transparent hover:bg-neutral-900 transition-colors">
+                    <button className="cursor-pointer flex gap-2 items-center text-sm px-3 rounded-xl bg-transparent hover:bg-neutral-900 transition-colors">
                         <BiHeart size={22} />
                     </button>
 
-                    <button className="flex gap-2 items-center border border-neutral-700 text-sm p-3 rounded-2xl bg-transparent hover:bg-neutral-900 transition-colors">
+                    <button className="cursor-pointer flex gap-2 items-center border border-neutral-700 text-sm p-3 rounded-2xl bg-transparent hover:bg-neutral-900 transition-colors">
                         <FiUser />
                         Entrar
                     </button>
 
-                    <button className="flex gap-1 items-center bg-purple-600 p-3 rounded-xl font-bold">
+                    <button className="cursor-pointer flex gap-1 items-center bg-purple-600 p-3 rounded-xl font-bold">
                         <IoCartOutline size={22} />
                         Carrinho
                     </button>
