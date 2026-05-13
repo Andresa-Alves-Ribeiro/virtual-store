@@ -5,7 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 export default function Header() {
     return (
-        <div className="w-full">
+        <div className="w-full dark:bg-black">
             <span className="bg-purple-700 w-full flex items-center justify-center text-sm p-2">
                 🎵 Frete Grátis em compras acima de R$ 500 | Parcele em até 12x sem juros
             </span>
