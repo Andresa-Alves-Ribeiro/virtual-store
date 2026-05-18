@@ -20,10 +20,10 @@ export default function OficialBrands() {
                 {brands.map((brand) => (
                     <div
                         key={brand.name}
-                        className="flex min-w-30 shrink-0 items-center justify-center rounded-lg bg-[#2a2a2e] px-5 py-4 sm:min-w-[8.5rem] sm:px-6 sm:py-5"
+                        className="group flex min-w-30 shrink-0 cursor-pointer items-center justify-center rounded-lg border border-transparent bg-[#2a2a2e] px-5 py-4 transition-colors hover:border-neutral-600 sm:min-w-34 sm:px-6 sm:py-5"
                     >
                         <span
-                            className="text-center text-base font-bold sm:text-lg"
+                            className="text-center text-base font-bold transition-transform group-hover:scale-105 sm:text-lg"
                             style={{ color: brand.color }}
                         >
                             {brand.name}
