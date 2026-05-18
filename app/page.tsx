@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import MostSearched from "./components/MostSearched/MostSeached";
+import OficialBrands from "./components/OficialBrands/OficialBrands";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <MostSearched />
+      <OficialBrands />
     </div>
   );
 }
