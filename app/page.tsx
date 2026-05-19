@@ -1,3 +1,4 @@
+import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import MostSearched from "./components/MostSearched/MostSeached";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <MostSearched />
       <OficialBrands />
+      <Categories />
     </div>
   );
 }

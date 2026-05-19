@@ -37,7 +37,7 @@ export default function Hero() {
                             <h1 className="font-sans text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                                 <span className="block">
                                     Sua{" "}
-                                    <span className="bg-linear-to-r from-[#C084FC] to-[#E879F9] bg-clip-text text-transparent">
+                                    <span className="bg-linear-to-r from-[#F36FD7] via-[#D85AF2] to-[#9B2CF3] bg-clip-text text-transparent">
                                         Música
                                     </span>
                                 </span>
