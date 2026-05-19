@@ -9,7 +9,7 @@ const catalogy: Instrument[] = [
         name: "American Professional II Stratocaster",
         description:
             "Guitarra elétrica com captadores V-Mod II, braço em maple e tremolo de duas pontas",
-        avaliation: 5,
+        stars: 5,
         new_price: 15499,
     },
     {
@@ -20,7 +20,7 @@ const catalogy: Instrument[] = [
         name: "Stage Custom Birch 5 Peças",
         description:
             "Bateria acústica com cascos em birch, ferragens em die-cast e pratos incluídos no kit",
-        avaliation: 5,
+        stars: 5,
         new_price: 5999,
     },
     {
@@ -31,7 +31,7 @@ const catalogy: Instrument[] = [
         name: "FP-30X Piano Digital",
         description:
             "Piano digital com 88 teclas PHA-4 Standard, Bluetooth e sons SuperNATURAL",
-        avaliation: 5,
+        stars: 5,
         new_price: 4699,
     },
     {
@@ -42,7 +42,7 @@ const catalogy: Instrument[] = [
         name: "GD11CE-NS Violão Folk Eletro",
         description:
             "Violão dreadnought com tampo em spruce, pré-amplificador TP-4T e afinador embutido",
-        avaliation: 5,
+        stars: 5,
         new_price: 2899,
     },
     {
@@ -53,7 +53,7 @@ const catalogy: Instrument[] = [
         name: "Player Precision Bass PF",
         description:
             "Baixo elétrico de 4 cordas com captadores split single-coil e escala de 34 polegadas",
-        avaliation: 5,
+        stars: 5,
         new_price: 6299,
     },
     {
@@ -64,7 +64,7 @@ const catalogy: Instrument[] = [
         name: "Les Paul Studio",
         description:
             "Guitarra elétrica com corpo em mogno, braço em maple e captadores Burstbucker",
-        avaliation: 5,
+        stars: 5,
         new_price: 14999,
     },
     {
@@ -75,7 +75,7 @@ const catalogy: Instrument[] = [
         name: "C5-CE Violão Clássico Eletro",
         description:
             "Violão clássico com tampo em cedro canadense, cordas de náilon e pré Fishman Sonitone",
-        avaliation: 4,
+        stars: 4,
         new_price: 2199,
     },
     {
@@ -86,7 +86,7 @@ const catalogy: Instrument[] = [
         name: "Ukulele Soprano Kala KA-15S",
         description:
             "Ukulele soprano com corpo em mogno, escala de 13,6 polegadas e acabamento acetinado",
-        avaliation: 4,
+        stars: 4,
         new_price: 449,
     },
     {
@@ -97,7 +97,7 @@ const catalogy: Instrument[] = [
         name: "Export EXX725SP Bateria",
         description:
             "Kit de bateria com 5 peças em poplar, ferragens 830 e pratos Sabian SBR incluídos",
-        avaliation: 5,
+        stars: 5,
         new_price: 4899,
     },
     {
@@ -108,7 +108,7 @@ const catalogy: Instrument[] = [
         name: "Meinl Percussion Headliner Series Snare Cajon",
         description:
             "Cajón em birch com superfície de batemento ajustável e som grave definido",
-        avaliation: 4,
+        stars: 4,
         new_price: 899,
     },
     {
@@ -119,7 +119,7 @@ const catalogy: Instrument[] = [
         name: "TD-07KV Bateria Eletrônica",
         description:
             "Bateria eletrônica com módulo TD-07, pads mesh e 25 kits prontos para estúdio",
-        avaliation: 5,
+        stars: 5,
         new_price: 7499,
     },
     {
@@ -130,7 +130,7 @@ const catalogy: Instrument[] = [
         name: "Korg Minilogue xd",
         description:
             "Sintetizador analógico híbrido com 37 teclas, sequenciador de 16 passos e efeitos digitais",
-        avaliation: 5,
+        stars: 5,
         new_price: 4299,
     },
     {
@@ -141,7 +141,7 @@ const catalogy: Instrument[] = [
         name: "P-125 Piano Digital",
         description:
             "Piano compacto com 88 teclas GHS, 24 vozes e conexão USB para gravação",
-        avaliation: 4,
+        stars: 4,
         new_price: 3899,
     },
     {
@@ -152,7 +152,7 @@ const catalogy: Instrument[] = [
         name: "Saxofone Alto Yamaha YAS 280",
         description:
             "Saxofone alto em latão com chaves Power-forged e acabamento para estudantes avançados",
-        avaliation: 5,
+        stars: 5,
         new_price: 5499,
     },
     {
@@ -163,7 +163,7 @@ const catalogy: Instrument[] = [
         name: "Trompete Yamaha YTR 2330",
         description:
             "Trompete em latão amarelo com monel pistons e campânula de 4,8 polegadas",
-        avaliation: 4,
+        stars: 4,
         new_price: 3299,
     },
     {
@@ -174,7 +174,7 @@ const catalogy: Instrument[] = [
         name: "Flauta Transversal Gemeinhardt 2SP",
         description:
             "Flauta transversal em níquel prateado com chaves fechadas e headjoint de resposta rápida",
-        avaliation: 4,
+        stars: 4,
         new_price: 1899,
     },
     {
@@ -185,7 +185,7 @@ const catalogy: Instrument[] = [
         name: "Gaita Hohner Marine Band 1896 C",
         description:
             "Gaita diatônica em madeira com 20 vozes e afinação Richter para blues e folk",
-        avaliation: 4,
+        stars: 4,
         new_price: 480,
     },
     {
@@ -196,7 +196,7 @@ const catalogy: Instrument[] = [
         name: "Microfone Shure SM58-LC",
         description:
             "Microfone cardioide para voz ao vivo com padrão polar consistente e construção robusta",
-        avaliation: 5,
+        stars: 5,
         new_price: 1199,
     },
     {
@@ -207,7 +207,7 @@ const catalogy: Instrument[] = [
         name: "Interface de Áudio Usb Focusrite Scarlett 2i2 3 Geração c",
         description:
             "Interface de áudio USB com 2 entradas combo, pré-amps Scarlett e latência ultra baixa",
-        avaliation: 5,
+        stars: 5,
         new_price: 1199,
     },
     {
@@ -218,7 +218,7 @@ const catalogy: Instrument[] = [
         name: "Violino 4/4 Eagle VE441",
         description:
             "Violino elétrico com corpo em resina, equalizador embutido e saída para fones",
-        avaliation: 4,
+        stars: 4,
         new_price: 4599,
     },
 ];

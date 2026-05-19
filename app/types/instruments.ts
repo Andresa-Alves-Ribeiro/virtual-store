@@ -6,7 +6,7 @@ export interface Instrument {
     brand?: string;
     name: string;
     description: string;
-    avaliation: number;
+    stars: number;
     old_price?: number;
     new_price: number;
 }

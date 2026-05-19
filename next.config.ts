@@ -43,6 +43,11 @@ const nextConfig: NextConfig = {
         hostname: "cdn.awsli.com.br",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+        pathname: "/**",
+      },
     ],
   },
 };

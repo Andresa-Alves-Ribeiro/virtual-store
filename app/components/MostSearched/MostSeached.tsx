@@ -20,7 +20,7 @@ export default function MostSearched() {
 
             <div className="mx-auto mt-8 grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {weeklyHighlights.map((instrument) => (
-                    <Card key={instrument.id} imagem={instrument.image} type={instrument.instrument_type} title={instrument.name} description={instrument.description} avaliation={instrument.avaliation} oldPrice={instrument.old_price} newPrice={instrument.new_price} />
+                    <Card key={instrument.id} imagem={instrument.image} type={instrument.instrument_type} title={instrument.name} description={instrument.description} stars={instrument.stars} oldPrice={instrument.old_price} newPrice={instrument.new_price} />
                 ))}
             </div>
         </section>

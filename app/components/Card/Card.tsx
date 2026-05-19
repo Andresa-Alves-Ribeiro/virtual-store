@@ -6,7 +6,7 @@ type CardProps = {
     type?: string;
     title: string;
     description: string;
-    avaliation: number;
+    stars: number;
     oldPrice?: number;
     newPrice: number;
     destaque?: boolean;
@@ -25,13 +25,13 @@ export default function Card({
     type,
     title,
     description,
-    avaliation,
+    stars,
     oldPrice,
     newPrice,
     brand,
     destaque = true,
 }: CardProps) {
-    const ratingDisplay = avaliation.toFixed(1);
+    const ratingDisplay = stars.toFixed(1);
 
     const dividedPrice = formatBRL(newPrice / 12);
 
@@ -60,7 +60,7 @@ export default function Card({
 
                 <h3 className="text-xl font-bold leading-tight text-white">{title}</h3>
 
-                <p className="line-clamp-3 text-sm leading-relaxed text-zinc-400">{description}</p>
+                <p className="text-sm leading-relaxed text-zinc-400 line-clamp-2">{description}</p>
 
                 <div className="flex items-center gap-2">
                     <div className="flex gap-0.5" aria-label={`Avaliação ${ratingDisplay} de 5`}>
@@ -68,7 +68,7 @@ export default function Card({
                             <FaStar
                                 key={i}
                                 className={
-                                    i < Math.round(avaliation)
+                                    i < Math.round(stars)
                                         ? "size-4 text-yellow-400"
                                         : "size-4 text-zinc-600"
                                 }
