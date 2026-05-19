@@ -3,13 +3,14 @@ import { FaBolt, FaShoppingCart, FaStar } from "react-icons/fa";
 
 type CardProps = {
     imagem: string;
-    type: string;
+    type?: string;
     title: string;
     description: string;
     avaliation: number;
     oldPrice?: number;
     newPrice: number;
     destaque?: boolean;
+    brand?: string;
 };
 
 function formatBRL(value: number) {
@@ -27,9 +28,12 @@ export default function Card({
     avaliation,
     oldPrice,
     newPrice,
+    brand,
     destaque = true,
 }: CardProps) {
     const ratingDisplay = avaliation.toFixed(1);
+
+    const dividedPrice = (newPrice / 12).toFixed(2);
 
     return (
         <article className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-neutral-500 bg-[#1a1a1c] shadow-lg">
@@ -49,8 +53,10 @@ export default function Card({
                 ) : null}
             </div>
 
-            <div className="flex flex-1 flex-col gap-3 p-4 pt-4">
+            <div className="flex flex-1 flex-col gap-3 p-4 pt-1">
                 <span className="text-sm font-semibold text-purple-400">{type}</span>
+
+                <span className="text-sm font-semibold text-purple-400">{brand}</span>
 
                 <h3 className="text-xl font-bold leading-tight text-white">{title}</h3>
 
@@ -81,6 +87,7 @@ export default function Card({
                             </span>
                         ) : null}
                         <span className="text-2xl font-bold text-purple-400">{formatBRL(newPrice)}</span>
+                        <p className="text-xs text-neutral-500">ou 12x sem juros de R$ {dividedPrice}</p>
                     </div>
 
                     <button

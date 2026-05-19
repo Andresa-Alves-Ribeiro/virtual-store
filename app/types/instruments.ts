@@ -3,6 +3,7 @@ export interface Instrument {
     id: number;
     image: string;
     instrument_type: string;
+    brand?: string;
     name: string;
     description: string;
     avaliation: number;
