@@ -5,7 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 export default function Header() {
     return (
-        <div className="w-full dark:bg-black">
+        <div className="w-full dark:bg-zinc-950 border-b border-zinc-800">
             <span className="bg-purple-700 w-full flex items-center justify-center text-sm p-2">
                 🎵 Frete Grátis em compras acima de R$ 500 | Parcele em até 12x sem juros
             </span>
@@ -29,15 +29,15 @@ export default function Header() {
                     />
 
                     <input placeholder="Buscar instrumentos, marcas, modelos..."
-                        className="border border-neutral-600 bg-neutral-800 rounded-md py-3 pr-3 pl-10 w-140" />
+                        className="border border-zinc-600 bg-zinc-800 rounded-md py-3 pr-3 pl-10 w-140" />
                 </div>
 
                 <div className="flex gap-3">
-                    <button className="cursor-pointer flex gap-2 items-center text-sm px-3 rounded-xl bg-transparent hover:bg-neutral-900 transition-colors">
+                    <button className="cursor-pointer flex gap-2 items-center text-sm px-3 rounded-xl bg-transparent hover:bg-zinc-900 transition-colors">
                         <BiHeart size={22} />
                     </button>
 
-                    <button className="cursor-pointer flex gap-2 items-center border border-neutral-700 text-sm p-3 rounded-2xl bg-transparent hover:bg-neutral-900 transition-colors">
+                    <button className="cursor-pointer flex gap-2 items-center border border-zinc-700 text-sm p-3 rounded-2xl bg-transparent hover:bg-zinc-900 transition-colors">
                         <FiUser />
                         Entrar
                     </button>

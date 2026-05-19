@@ -33,10 +33,10 @@ export default function Card({
 }: CardProps) {
     const ratingDisplay = avaliation.toFixed(1);
 
-    const dividedPrice = (newPrice / 12).toFixed(2);
+    const dividedPrice = formatBRL(newPrice / 12);
 
     return (
-        <article className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-neutral-500 bg-[#1a1a1c] shadow-lg">
+        <article className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-zinc-500 bg-zinc-800/60 shadow-lg">
             <div className="relative aspect-square w-full shrink-0">
                 <Image
                     src={imagem}
@@ -53,14 +53,14 @@ export default function Card({
                 ) : null}
             </div>
 
-            <div className="flex flex-1 flex-col gap-3 p-4 pt-1">
+            <div className="flex flex-1 flex-col gap-2 p-4">
                 <span className="text-sm font-semibold text-purple-400">{type}</span>
 
                 <span className="text-sm font-semibold text-purple-400">{brand}</span>
 
                 <h3 className="text-xl font-bold leading-tight text-white">{title}</h3>
 
-                <p className="line-clamp-3 text-sm leading-relaxed text-neutral-400">{description}</p>
+                <p className="line-clamp-3 text-sm leading-relaxed text-zinc-400">{description}</p>
 
                 <div className="flex items-center gap-2">
                     <div className="flex gap-0.5" aria-label={`Avaliação ${ratingDisplay} de 5`}>
@@ -70,7 +70,7 @@ export default function Card({
                                 className={
                                     i < Math.round(avaliation)
                                         ? "size-4 text-yellow-400"
-                                        : "size-4 text-neutral-600"
+                                        : "size-4 text-zinc-600"
                                 }
                                 aria-hidden
                             />
@@ -81,13 +81,13 @@ export default function Card({
 
                 <div className="mt-auto flex items-end justify-between gap-3 pt-1">
                     <div className="flex min-w-0 flex-col gap-0.5">
-                        {oldPrice != null ? (
-                            <span className="text-sm text-neutral-500 line-through">
+                        {oldPrice == null ? null : (
+                            <span className="text-sm text-zinc-500 line-through">
                                 {formatBRL(oldPrice)}
                             </span>
-                        ) : null}
+                        )}
                         <span className="text-2xl font-bold text-purple-400">{formatBRL(newPrice)}</span>
-                        <p className="text-xs text-neutral-500">ou 12x sem juros de R$ {dividedPrice}</p>
+                        <p className="text-xs text-zinc-500">ou 12x sem juros de {dividedPrice}</p>
                     </div>
 
                     <button

@@ -29,11 +29,6 @@ export default function Hero() {
                 <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
                     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-20">
                         <div className="flex max-w-3xl flex-col items-start text-left">
-                            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#A855F7]/40 bg-[#A855F7]/20 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
-                                <span className="size-2 shrink-0 rounded-full bg-[#C084FC]" aria-hidden />
-                                Novo: Coleção 2024
-                            </span>
-
                             <h1 className="font-sans text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                                 <span className="block">
                                     Sua{" "}
@@ -68,7 +63,7 @@ export default function Hero() {
                                 </button>
                             </div>
 
-                            <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm font-medium text-neutral-500 md:gap-x-14">
+                            <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm font-medium text-zinc-500 md:gap-x-14">
                                 <span className="inline-flex items-center gap-2">
                                     <FaGuitar className="text-lg text-[#C084FC]" aria-hidden />
                                     Cordas
@@ -79,7 +74,7 @@ export default function Hero() {
                                 </span>
                                 <span className="inline-flex items-center gap-2">
                                     <FaHeadphones className="text-lg text-[#C084FC]" aria-hidden />
-                                    Áudio Pro
+                                    Acessórios
                                 </span>
                             </div>
                         </div>
@@ -110,33 +105,33 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className="flex justify-center gap-14 border-t border-b border-t-purple-800 border-b-neutral-700 bg-neutral-900 p-3 text-sm">
+            <section className="flex justify-center gap-14 border-t border-b border-t-purple-800 border-b-zinc-700 bg-zinc-900 p-3 text-sm">
                 <div className="flex items-center gap-2">
                     <AiOutlineSafety size={20} color="#00c951" />
 
-                    <p className="text-neutral-400">Compra 100% Segura</p>
+                    <p className="text-zinc-400">Compra 100% Segura</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                     <LiaCertificateSolid size={22} color="#f0b100" />
 
-                    <p className="text-neutral-400">Loja Certificada</p>
+                    <p className="text-zinc-400">Loja Certificada</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                     <FiTruck size={20} color="#2b7fff" />
 
-                    <p className="text-neutral-400">Entrega Rastreável</p>
+                    <p className="text-zinc-400">Entrega Rastreável</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                     <MdLockOutline size={22} color="#ad46ff" />
 
-                    <p className="text-neutral-400">Dados Protegidos SSL</p>
+                    <p className="text-zinc-400">Dados Protegidos SSL</p>
                 </div>
             </section>
 
-            <section className="flex justify-evenly p-10 border-b border-b-neutral-800">
+            <section className="!bg-zinc-950 flex justify-evenly p-10 border-b border-b-zinc-800">
                 <div className="flex gap-3 items-center">
                     <div className="rounded-full bg-[#9810fa]/35 p-3">
                         <FiTruck size={24} color="#c27aff" />
@@ -144,7 +139,7 @@ export default function Hero() {
 
                     <div>
                         <h3 className="font-bold text-lg">Frete Grátis</h3>
-                        <p className="text-neutral-400 text-sm">Em compras acima de R$ 500</p>
+                        <p className="text-zinc-400 text-sm">Em compras acima de R$ 500</p>
                     </div>
                 </div>
 
@@ -155,7 +150,7 @@ export default function Hero() {
 
                     <div>
                         <h3 className="font-bold text-lg">Garantia Estendida</h3>
-                        <p className="text-neutral-400 text-sm">2 anos em todos os produtos</p>
+                        <p className="text-zinc-400 text-sm">2 anos em todos os produtos</p>
                     </div>
                 </div>
 
@@ -166,7 +161,7 @@ export default function Hero() {
 
                     <div>
                         <h3 className="font-bold text-lg">Parcelamento</h3>
-                        <p className="text-neutral-400 text-sm">Em até 12x sem juros</p>
+                        <p className="text-zinc-400 text-sm">Em até 12x sem juros</p>
                     </div>
                 </div>
 
@@ -177,7 +172,7 @@ export default function Hero() {
 
                     <div>
                         <h3 className="font-bold text-lg">Suporte 24/7</h3>
-                        <p className="text-neutral-400 text-sm">Atendimento especializado</p>
+                        <p className="text-zinc-400 text-sm">Atendimento especializado</p>
                     </div>
                 </div>
             </section>

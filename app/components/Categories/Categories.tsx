@@ -28,7 +28,7 @@ const categories: CategoriesType[] = [
 
 export default function Categories() {
     return (
-        <section className="w-full flex flex-col border-b border-b-neutral-800 bg-[#0d0d12] px-6 py-10 md:py-12">
+        <section className="w-full flex flex-col border-b border-b-zinc-800 bg-zinc-950 px-6 py-10 md:py-12">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
                 <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-start gap-3">
@@ -38,12 +38,12 @@ export default function Categories() {
 
                         <div className="flex flex-col">
                             <h2 className="text-2xl font-bold text-white md:text-3xl">Categorias</h2>
-                            <p className="text-sm text-neutral-400">Navegue por tipo de instrumento</p>
+                            <p className="text-sm text-zinc-400">Navegue por tipo de instrumento</p>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-2 text-sm text-neutral-400 sm:shrink-0">
-                        <HiOutlineFunnel className="size-4 text-neutral-300" aria-hidden />
+                    <div className="flex items-center gap-2 text-sm text-zinc-400 sm:shrink-0">
+                        <HiOutlineFunnel className="size-4 text-zinc-300" aria-hidden />
                         <span>{catalogy.length} produtos</span>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Categories() {
                                     <h3 className="text-base font-bold text-white">{category.name}</h3>
                                     <p
                                         className={
-                                            isActive ? "text-sm text-white/90" : "text-sm text-neutral-400"
+                                            isActive ? "text-sm text-white/90" : "text-sm text-zinc-400"
                                         }
                                     >
                                         {category.items} {category.items === 1 ? "item" : "itens"}
