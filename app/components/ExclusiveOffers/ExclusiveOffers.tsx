@@ -1,7 +1,21 @@
+"use client"
+
 import { FaRegEnvelope } from "react-icons/fa";
 import { IoMusicalNotesOutline } from "react-icons/io5";
+import { toast } from "sonner";
 
 export default function ExclusiveOffers() {
+    const sendEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const input = e.currentTarget.closest("form")?.querySelector("input");
+        const email = input instanceof HTMLInputElement ? input.value : "";
+
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            toast.success("Email cadastrado com sucesso! Verifique seu email.");
+        } else {
+            toast.error("Preencha um email válido!")
+        }
+    };
+
     return (
         <div className="bg-linear-to-br from-purple-900 via-purple-800 to-zinc-900 py-16">
             <div className="container mx-auto max-w-7xl">
@@ -18,7 +32,7 @@ export default function ExclusiveOffers() {
                         <input placeholder="seu@email.com"
                             className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-purple-300/50 focus:outline-none focus:border-purple-400 focus:bg-white/15 transition-all" />
 
-                        <button className="px-8 py-4 bg-white text-purple-900 font-bold rounded-lg hover:bg-purple-100 transition-all hover:scale-105 active:scale-95 whitespace-nowrap">Inscrever-se</button>
+                        <button type="button" onClick={sendEmail} className="px-8 py-4 bg-white text-purple-900 font-bold rounded-lg hover:bg-purple-100 transition-all hover:scale-105 active:scale-95 whitespace-nowrap">Inscrever-se</button>
                     </form>
 
                     <div className="flex items-center justify-center gap-2 mt-6 text-purple-300 text-sm">

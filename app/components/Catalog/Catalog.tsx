@@ -3,7 +3,7 @@ import catalogy from "@/app/data/catalog";
 
 export default function Catalog() {
     return (
-        <section className="w-full bg-zinc-900 px-6 py-10 md:px-10 md:py-12">
+        <section id="catalog" className="w-full bg-zinc-900 px-6 py-10 md:px-10 md:py-12">
             <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
                 <div>
                     <h2 className="text-2xl font-extrabold tracking-tight text-white md:text-3xl">

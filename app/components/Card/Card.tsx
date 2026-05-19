@@ -1,5 +1,9 @@
+"use client"
+
 import Image from "next/image";
-import { FaBolt, FaShoppingCart, FaStar } from "react-icons/fa";
+import { useState } from "react";
+import { FaBolt, FaHeart, FaRegHeart, FaShoppingCart, FaStar } from "react-icons/fa";
+import { toast } from "sonner";
 
 type CardProps = {
     imagem: string;
@@ -31,9 +35,17 @@ export default function Card({
     brand,
     destaque = true,
 }: CardProps) {
+    const [isLiked, setIsLiked] = useState(false)
+
     const ratingDisplay = stars.toFixed(1);
 
     const dividedPrice = formatBRL(newPrice / 12);
+
+    const LikedProduct = () => {
+        setIsLiked(!isLiked)
+
+        toast.success("Produto adicionado aos favoritos")
+    }
 
     return (
         <article className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-zinc-500 bg-zinc-800/60 shadow-lg">
@@ -45,6 +57,20 @@ export default function Card({
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 420px"
                 />
+
+                <button
+                    type="button"
+                    onClick={LikedProduct}
+                    className="absolute top-3 left-3"
+                    aria-label={isLiked ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                >
+                    {isLiked ? (
+                        <FaHeart className="size-5 text-red-500 drop-shadow-md" aria-hidden />
+                    ) : (
+                        <FaRegHeart className="size-5 text-white drop-shadow-md" aria-hidden />
+                    )}
+                </button>
+
                 {destaque ? (
                     <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-2.5 py-1 text-xs font-bold tracking-wide text-black">
                         <FaBolt className="size-3 shrink-0" aria-hidden />

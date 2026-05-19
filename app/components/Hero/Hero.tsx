@@ -1,3 +1,5 @@
+"use client";
+
 import { AiOutlineSafety } from "react-icons/ai";
 import { CiPlay1 } from "react-icons/ci";
 import { FaGuitar, FaHeadphones, FaMicrophone, FaRegCreditCard } from "react-icons/fa";
@@ -10,6 +12,10 @@ const glassBase =
     "rounded-2xl border border-white/15 bg-white/[0.08] shadow-lg shadow-black/20 backdrop-blur-xl";
 const glassCardLg = `${glassBase} p-5 md:p-6`;
 const glassCardSm = `${glassBase} p-4 text-center sm:p-5`;
+
+function scrollToCatalog() {
+    document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth" });
+}
 
 export default function Hero() {
     return (
@@ -48,18 +54,11 @@ export default function Hero() {
                             <div className="flex flex-wrap items-center gap-3">
                                 <button
                                     type="button"
+                                    onClick={scrollToCatalog}
                                     className="inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-linear-to-r from-[#7c3aed] to-[#a855f7] px-6 py-3.5 text-base font-semibold text-white shadow-[0_0_28px_-4px_rgba(124,58,237,0.5)] transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A855F7]"
                                 >
                                     Explorar Produtos
                                     <IoMdArrowForward className="text-xl" aria-hidden />
-                                </button>
-
-                                <button
-                                    type="button"
-                                    className="inline-flex cursor-pointer items-center gap-2 rounded-2xl border border-white/20 bg-black/35 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
-                                >
-                                    <CiPlay1 className="text-xl" aria-hidden />
-                                    Ver Demonstração
                                 </button>
                             </div>
 
