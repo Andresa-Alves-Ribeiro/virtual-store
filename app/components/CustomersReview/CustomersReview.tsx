@@ -18,7 +18,7 @@ const reviews: ReviewsType[] = [
 export default function CustomersReview() {
     return (
         <div className="bg-linear-to-br from-zinc-900 via-zinc-950 to-zinc-900 py-16">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">O Que Nossos Clientes Dizem</h2>
                     <p className="text-zinc-400 text-lg">Avaliação média: <span>4.9/5</span> baseado em 2.847 avaliações</p>

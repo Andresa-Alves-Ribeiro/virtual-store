@@ -1,6 +1,7 @@
 import Catalog from "./components/Catalog/Catalog";
 import Categories from "./components/Categories/Categories";
 import CustomersReview from "./components/CustomersReview/CustomersReview";
+import ExclusiveOffers from "./components/ExclusiveOffers/ExclusiveOffers";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import MostSearched from "./components/MostSearched/MostSeached";
@@ -16,6 +17,7 @@ export default function Home() {
       <Categories />
       <Catalog />
       <CustomersReview />
+      <ExclusiveOffers />
     </div>
   );
 }
