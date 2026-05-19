@@ -1,11 +1,21 @@
+"use client"
+
 import { BiHeart, BiSearch } from "react-icons/bi";
 import { FaMusic } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import { IoCartOutline } from "react-icons/io5";
+import { CartDrawer } from "../CartDrawer/CartDrawer";
+import { useState } from "react";
+import { useCartStore } from "@/app/store/useCartStore";
 
 export default function Header() {
+    const { items } = useCartStore();
+    const [cartOpen, setCartOpen] = useState(false)
+
+    const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
+
     return (
-        <div className="w-full dark:bg-zinc-950 border-b border-zinc-800">
+        <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950">
             <span className="bg-purple-700 w-full flex items-center justify-center text-sm p-2">
                 🎵 Frete Grátis em compras acima de R$ 500 | Parcele em até 12x sem juros
             </span>
@@ -42,12 +52,20 @@ export default function Header() {
                         Entrar
                     </button>
 
-                    <button className="cursor-pointer flex gap-1 items-center bg-purple-600 p-3 rounded-xl font-bold">
+                    <button onClick={() => setCartOpen(true)} className="relative cursor-pointer flex gap-1 items-center bg-purple-600 p-3 rounded-xl font-bold">
                         <IoCartOutline size={22} />
                         Carrinho
+
+                        {totalItems > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                                {totalItems}
+                            </span>
+                        )}
                     </button>
                 </div>
             </div>
-        </div>
+
+            <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
+        </header>
     );
 }

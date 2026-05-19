@@ -1,11 +1,14 @@
 "use client"
 
+import { CartItem, Product } from "@/app/context/CartContext";
+import { useCartStore } from "@/app/store/useCartStore";
 import Image from "next/image";
 import { useState } from "react";
 import { FaBolt, FaHeart, FaRegHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import { toast } from "sonner";
 
 type CardProps = {
+    id: number;
     imagem: string;
     type?: string;
     title: string;
@@ -15,6 +18,8 @@ type CardProps = {
     newPrice: number;
     destaque?: boolean;
     brand?: string;
+    quantity?: number,
+    product?: Product;
 };
 
 function formatBRL(value: number) {
@@ -25,6 +30,7 @@ function formatBRL(value: number) {
 }
 
 export default function Card({
+    id,
     imagem,
     type,
     title,
@@ -33,6 +39,8 @@ export default function Card({
     oldPrice,
     newPrice,
     brand,
+    product,
+    quantity,
     destaque = true,
 }: CardProps) {
     const [isLiked, setIsLiked] = useState(false)
@@ -46,6 +54,18 @@ export default function Card({
 
         toast.success("Produto adicionado aos favoritos")
     }
+
+    const { addItem } = useCartStore();
+
+    const cartProduct: CartItem = {
+        ...(product ?? {
+            id,
+            name: title,
+            price: newPrice,
+            image: imagem,
+        }),
+        quantity: quantity ?? 1,
+    };
 
     return (
         <article className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-zinc-500 bg-zinc-800/60 shadow-lg">
@@ -118,7 +138,8 @@ export default function Card({
 
                     <button
                         type="button"
-                        className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-purple-500 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-purple-500/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
+                        onClick={() => addItem(cartProduct)}
+                        className="cursor-pointer inline-flex shrink-0 items-center gap-2 rounded-lg bg-purple-500 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-purple-500/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
                     >
                         <FaShoppingCart className="size-4 shrink-0" aria-hidden />
                         Comprar

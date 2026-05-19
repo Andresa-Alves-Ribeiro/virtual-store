@@ -17,7 +17,7 @@ export default function Catalog() {
 
             <div className="mx-auto mt-8 grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {catalogy.map((instrument) => (
-                    <Card destaque={false} key={instrument.id} imagem={instrument.image} brand={instrument.brand} title={instrument.name} description={instrument.description} stars={instrument.stars} oldPrice={instrument.old_price} newPrice={instrument.new_price} />
+                    <Card destaque={false} key={instrument.id} id={instrument.id} imagem={instrument.image} brand={instrument.brand} title={instrument.name} description={instrument.description} stars={instrument.stars} oldPrice={instrument.old_price} newPrice={instrument.new_price} />
                 ))}
             </div>
         </section>
