@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react";
 import Catalog from "./components/Catalog/Catalog";
 import Categories from "./components/Categories/Categories";
 import CustomersReview from "./components/CustomersReview/CustomersReview";
@@ -10,6 +13,10 @@ import OficialBrands from "./components/OficialBrands/OficialBrands";
 import { CartProvider } from "./context/CartContext";
 
 export default function Home() {
+  const [category, setCategory] = useState("")
+
+  console.log(category)
+
   return (
     <CartProvider>
       <div className="flex flex-col">
@@ -17,8 +24,8 @@ export default function Home() {
         <Hero />
         <MostSearched />
         <OficialBrands />
-        <Categories />
-        <Catalog />
+        <Categories onSelectCategory={(category) => setCategory(category)} />
+        <Catalog category={category} />
         <CustomersReview />
         <ExclusiveOffers />
         <Footer />

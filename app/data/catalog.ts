@@ -4,7 +4,7 @@ const catalogy: Instrument[] = [
     {
         id: 1,
         image: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=500&h=500&fit=crop",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Fender",
         name: "American Professional II Stratocaster",
         description:
@@ -15,7 +15,7 @@ const catalogy: Instrument[] = [
     {
         id: 2,
         image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=500&h=500&fit=crop",
-        instrument_type: "Percussão",
+        instrument_type: "Percussão rítmica",
         brand: "Yamaha",
         name: "Stage Custom Birch 5 Peças",
         description:
@@ -37,7 +37,7 @@ const catalogy: Instrument[] = [
     {
         id: 4,
         image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500&h=500&fit=crop",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Takamine",
         name: "GD11CE-NS Violão Folk Eletro",
         description:
@@ -48,7 +48,7 @@ const catalogy: Instrument[] = [
     {
         id: 5,
         image: "https://static.wixstatic.com/media/21feb7_08ccce50efd34cefb5298086353fe4fd~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/21feb7_08ccce50efd34cefb5298086353fe4fd~mv2.png",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Fender",
         name: "Player Precision Bass PF",
         description:
@@ -59,7 +59,7 @@ const catalogy: Instrument[] = [
     {
         id: 6,
         image: "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=500&h=500&fit=crop",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Gibson",
         name: "Les Paul Studio",
         description:
@@ -70,7 +70,7 @@ const catalogy: Instrument[] = [
     {
         id: 7,
         image: "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=500&h=500&fit=crop",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Cordoba",
         name: "C5-CE Violão Clássico Eletro",
         description:
@@ -81,7 +81,7 @@ const catalogy: Instrument[] = [
     {
         id: 8,
         image: "https://m.media-amazon.com/images/I/6170bf4SvvL.jpg",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas tangidas",
         brand: "Kala",
         name: "Ukulele Soprano Kala KA-15S",
         description:
@@ -92,7 +92,7 @@ const catalogy: Instrument[] = [
     {
         id: 9,
         image: "https://www.drumshop.com.br/loja/images/temp/458_11929.png",
-        instrument_type: "Percussão",
+        instrument_type: "Percussão rítmica",
         brand: "Pearl",
         name: "Export EXX725SP Bateria",
         description:
@@ -103,7 +103,7 @@ const catalogy: Instrument[] = [
     {
         id: 10,
         image: "https://http2.mlstatic.com/D_NQ_NP_799733-MLB83589292423_042025-O-meinl-percussion-headliner-series-snare-cajon-maple.webp",
-        instrument_type: "Percussão",
+        instrument_type: "Percussão rítmica",
         brand: "Meinl",
         name: "Meinl Percussion Headliner Series Snare Cajon",
         description:
@@ -114,7 +114,7 @@ const catalogy: Instrument[] = [
     {
         id: 11,
         image: "https://m.media-amazon.com/images/I/71EBOIw+n3L._AC_UF894,1000_QL80_.jpg",
-        instrument_type: "Percussão",
+        instrument_type: "Percussão rítmica",
         brand: "Roland",
         name: "TD-07KV Bateria Eletrônica",
         description:
@@ -147,7 +147,7 @@ const catalogy: Instrument[] = [
     {
         id: 14,
         image: "https://m.media-amazon.com/images/I/815SmeouYfL.jpg",
-        instrument_type: "Sopro",
+        instrument_type: "Madeira",
         brand: "Yamaha",
         name: "Saxofone Alto Yamaha YAS 280",
         description:
@@ -158,7 +158,7 @@ const catalogy: Instrument[] = [
     {
         id: 15,
         image: "https://m.media-amazon.com/images/I/717B2yDZlgL.jpg",
-        instrument_type: "Sopro",
+        instrument_type: "Metais",
         brand: "Yamaha",
         name: "Trompete Yamaha YTR 2330",
         description:
@@ -169,7 +169,7 @@ const catalogy: Instrument[] = [
     {
         id: 16,
         image: "https://http2.mlstatic.com/D_NQ_NP_651083-MLB106918938595_022026-O.webp",
-        instrument_type: "Sopro",
+        instrument_type: "Madeira",
         brand: "Gemeinhardt",
         name: "Flauta Transversal Gemeinhardt 2SP",
         description:
@@ -180,7 +180,7 @@ const catalogy: Instrument[] = [
     {
         id: 17,
         image: "https://http2.mlstatic.com/D_NQ_NP_605121-MLA100018736003_122025-O.webp",
-        instrument_type: "Sopro",
+        instrument_type: "Madeira",
         brand: "Hohner",
         name: "Gaita Hohner Marine Band 1896 C",
         description:
@@ -191,7 +191,7 @@ const catalogy: Instrument[] = [
     {
         id: 18,
         image: "https://studiocentermusic.com.br/wp-content/uploads/2020/04/6d6050f61961c26adef745f0654accc6.png",
-        instrument_type: "Áudio Pro",
+        instrument_type: "Áudio e acessórios",
         brand: "Shure",
         name: "Microfone Shure SM58-LC",
         description:
@@ -202,7 +202,7 @@ const catalogy: Instrument[] = [
     {
         id: 19,
         image: "https://cdn.awsli.com.br/600x450/451/451842/produto/135401380/5577b029aa.jpg",
-        instrument_type: "Áudio Pro",
+        instrument_type: "Áudio e acessórios",
         brand: "Focusrite",
         name: "Interface de Áudio Usb Focusrite Scarlett 2i2 3 Geração c",
         description:
@@ -213,7 +213,7 @@ const catalogy: Instrument[] = [
     {
         id: 20,
         image: "https://m.media-amazon.com/images/I/71JlgP1p-FL.jpg",
-        instrument_type: "Cordas",
+        instrument_type: "Cordas de arco",
         brand: "Eagle",
         name: "Violino 4/4 Eagle VE441",
         description:

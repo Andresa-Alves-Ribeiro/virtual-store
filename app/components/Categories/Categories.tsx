@@ -1,4 +1,7 @@
+"use client"
+
 import catalogy from "@/app/data/catalog";
+import { useState } from "react";
 import type { IconType } from "react-icons";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { GrGrid } from "react-icons/gr";
@@ -26,7 +29,11 @@ const categories: CategoriesType[] = [
     { id: 9, name: "Áudio e acessórios", items: 2, icon: LuMic },
 ];
 
-export default function Categories() {
+type CategoriesProps = {
+    onSelectCategory: (category: string) => void;
+};
+
+export default function Categories({ onSelectCategory }: CategoriesProps) {
     return (
         <section className="w-full flex flex-col border-b border-b-zinc-800 bg-zinc-950 px-6 py-10 md:py-12">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
@@ -48,7 +55,7 @@ export default function Categories() {
                     </div>
                 </div>
 
-                <ul
+                <div
                     className="flex w-full list-none flex-wrap justify-start gap-4"
                     aria-label="Categorias de instrumentos"
                 >
@@ -57,8 +64,11 @@ export default function Categories() {
                         const isActive = category.id === 1;
 
                         return (
-                            <li
+                            <button
                                 key={category.id}
+                                onClick={() => {
+                                    onSelectCategory(category.name)
+                                }}
                                 className={
                                     isActive
                                         ? "flex min-w-[200px] shrink-0 flex-col items-center gap-3 rounded-2xl bg-linear-to-br from-purple-600 via-purple-500 to-purple-500 px-5 py-6 text-white shadow-[0_16px_80px_-10px_rgba(217,70,239,0.55)] cursor-pointer"
@@ -90,10 +100,10 @@ export default function Categories() {
                                         {category.items} {category.items === 1 ? "item" : "itens"}
                                     </p>
                                 </div>
-                            </li>
+                            </button>
                         );
                     })}
-                </ul>
+                </div>
             </div>
         </section>
     );
