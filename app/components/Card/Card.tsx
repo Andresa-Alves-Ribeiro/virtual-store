@@ -2,8 +2,8 @@
 
 import { CartItem, Product } from "@/app/context/CartContext";
 import { useCartStore } from "@/app/store/useCartStore";
+import { useFavoritesStore } from "@/app/store/useFavoritesStore";
 import Image from "next/image";
-import { useState } from "react";
 import { FaBolt, FaHeart, FaRegHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import { toast } from "sonner";
 
@@ -43,17 +43,23 @@ export default function Card({
     quantity,
     destaque = true,
 }: CardProps) {
-    const [isLiked, setIsLiked] = useState(false)
+    const hasHydrated = useFavoritesStore((s) => s.hasHydrated);
+    const likedIds = useFavoritesStore((s) => s.likedIds);
+    const toggleLike = useFavoritesStore((s) => s.toggleLike);
+
+    const liked = hasHydrated && likedIds.includes(id);
 
     const ratingDisplay = stars.toFixed(1);
 
     const dividedPrice = formatBRL(newPrice / 12);
 
     const LikedProduct = () => {
-        setIsLiked(!isLiked)
-
-        toast.success("Produto adicionado aos favoritos")
-    }
+        const wasLiked = liked;
+        toggleLike(id);
+        toast.success(
+            wasLiked ? "Removido dos favoritos" : "Adicionado aos favoritos"
+        );
+    };
 
     const { addItem } = useCartStore();
 
@@ -82,9 +88,9 @@ export default function Card({
                     type="button"
                     onClick={LikedProduct}
                     className="absolute top-3 left-3"
-                    aria-label={isLiked ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                    aria-label={liked ? "Remover dos favoritos" : "Adicionar aos favoritos"}
                 >
-                    {isLiked ? (
+                    {liked ? (
                         <FaHeart className="size-5 text-red-500 drop-shadow-md" aria-hidden />
                     ) : (
                         <FaRegHeart className="size-5 text-white drop-shadow-md" aria-hidden />

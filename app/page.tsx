@@ -15,8 +15,6 @@ import { CartProvider } from "./context/CartContext";
 export default function Home() {
   const [category, setCategory] = useState("")
 
-  console.log(category)
-
   return (
     <CartProvider>
       <div className="flex flex-col">
