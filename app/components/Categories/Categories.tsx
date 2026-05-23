@@ -39,7 +39,7 @@ type CategoriesProps = {
 
 export default function Categories({ onSelectCategory }: CategoriesProps) {
     return (
-        <section className="w-full flex flex-col border-b border-b-zinc-800 bg-zinc-950 px-6 py-10 md:py-12">
+        <section className="flex w-full flex-col border-b border-b-zinc-800 bg-zinc-950 px-4 py-8 sm:px-6 sm:py-10 md:py-12">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
                 <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-start gap-3">
@@ -60,7 +60,7 @@ export default function Categories({ onSelectCategory }: CategoriesProps) {
                 </div>
 
                 <div
-                    className="flex w-full list-none flex-wrap justify-start gap-4"
+                    className="-mx-4 flex w-full list-none gap-3 overflow-x-auto px-4 pb-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-4 sm:px-6 md:mx-0 md:flex-wrap md:overflow-visible md:px-0 md:pb-0"
                     aria-label="Categorias de instrumentos"
                 >
                     {categories.map((category) => {
@@ -75,8 +75,8 @@ export default function Categories({ onSelectCategory }: CategoriesProps) {
                                 }}
                                 className={
                                     isActive
-                                        ? "flex min-w-[200px] shrink-0 flex-col items-center gap-3 rounded-2xl bg-linear-to-br from-purple-600 via-purple-500 to-purple-500 px-5 py-6 text-white shadow-[0_16px_80px_-10px_rgba(217,70,239,0.55)] cursor-pointer"
-                                        : "flex min-w-[200px] shrink-0 flex-col items-center gap-3 rounded-2xl bg-[#212126] px-5 py-6 transition-colors hover:bg-[#2a2a30] border border-transparent hover:border-purple-500 cursor-pointer"
+                                        ? "flex min-w-[9.5rem] shrink-0 snap-start flex-col items-center gap-2 rounded-2xl bg-linear-to-br from-purple-600 via-purple-500 to-purple-500 px-4 py-5 text-white shadow-[0_16px_80px_-10px_rgba(217,70,239,0.55)] cursor-pointer sm:min-w-[11rem] sm:gap-3 sm:px-5 sm:py-6 md:min-w-[12.5rem]"
+                                        : "flex min-w-[9.5rem] shrink-0 snap-start flex-col items-center gap-2 rounded-2xl border border-transparent bg-[#212126] px-4 py-5 transition-colors hover:border-purple-500 hover:bg-[#2a2a30] cursor-pointer sm:min-w-[11rem] sm:gap-3 sm:px-5 sm:py-6 md:min-w-[12.5rem]"
                                 }
                             >
                                 <div

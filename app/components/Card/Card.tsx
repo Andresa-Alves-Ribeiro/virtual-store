@@ -110,7 +110,7 @@ export default function Card({
 
                 <span className="text-sm font-semibold text-purple-400">{brand}</span>
 
-                <h3 className="text-xl font-bold leading-tight text-white">{title}</h3>
+                <h3 className="text-lg font-bold leading-tight text-white sm:text-xl">{title}</h3>
 
                 <p className="text-sm leading-relaxed text-zinc-400 line-clamp-2">{description}</p>
 
@@ -131,21 +131,21 @@ export default function Card({
                     <span className="text-sm text-white">({ratingDisplay})</span>
                 </div>
 
-                <div className="mt-auto flex items-end justify-between gap-3 pt-1">
+                <div className="mt-auto flex flex-col gap-3 pt-1 sm:flex-row sm:items-end sm:justify-between">
                     <div className="flex min-w-0 flex-col gap-0.5">
                         {oldPrice == null ? null : (
                             <span className="text-sm text-zinc-500 line-through">
                                 {formatBRL(oldPrice)}
                             </span>
                         )}
-                        <span className="text-2xl font-bold text-purple-400">{formatBRL(newPrice)}</span>
+                        <span className="text-xl font-bold text-purple-400 sm:text-2xl">{formatBRL(newPrice)}</span>
                         <p className="text-xs text-zinc-500">ou 12x sem juros de {dividedPrice}</p>
                     </div>
 
                     <button
                         type="button"
                         onClick={() => addItem(cartProduct)}
-                        className="cursor-pointer inline-flex shrink-0 items-center gap-2 rounded-lg bg-purple-500 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-purple-500/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
+                        className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-purple-500 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-purple-500/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300 sm:w-auto"
                     >
                         <FaShoppingCart className="size-4 shrink-0" aria-hidden />
                         Comprar

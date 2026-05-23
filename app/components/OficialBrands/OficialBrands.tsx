@@ -63,7 +63,7 @@ export default function OficialBrands() {
     return (
         <section
             aria-labelledby="oficial-brands-heading"
-            className="flex w-full flex-col items-center border-b border-b-zinc-800 bg-zinc-950 px-6 py-10 md:py-12"
+            className="flex w-full flex-col items-center border-b border-b-zinc-800 bg-zinc-950 px-4 py-8 sm:px-6 sm:py-10 md:py-12"
         >
             <h2
                 id="oficial-brands-heading"
