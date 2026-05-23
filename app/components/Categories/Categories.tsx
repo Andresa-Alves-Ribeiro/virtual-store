@@ -1,7 +1,6 @@
 "use client"
 
 import catalogy from "@/app/data/catalog";
-import { useState } from "react";
 import type { IconType } from "react-icons";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { GrGrid } from "react-icons/gr";
@@ -17,17 +16,22 @@ type CategoriesType = {
     icon: IconType;
 };
 
+const instruments = catalogy.map((item) => (
+    item.instrument_type
+))
+
 const categories: CategoriesType[] = [
-    { id: 1, name: "Todos", items: 20, icon: GrGrid },
-    { id: 2, name: "Cordas de arco", items: 7, icon: PiGuitar },
-    { id: 3, name: "Cordas tangidas", items: 7, icon: PiGuitar },
-    { id: 4, name: "Percussão melódica", items: 4, icon: BsMusicNoteBeamed },
-    { id: 5, name: "Percussão ritmica", items: 7, icon: PiGuitar },
-    { id: 6, name: "Teclas", items: 3, icon: PiPianoKeysFill },
-    { id: 7, name: "Madeira", items: 4, icon: TbWind },
-    { id: 8, name: "Metais", items: 7, icon: PiGuitar },
-    { id: 9, name: "Áudio e acessórios", items: 2, icon: LuMic },
+    { id: 1, name: "Todos", items: instruments.length, icon: GrGrid },
+    { id: 2, name: "Cordas de arco", items: instruments.filter(i => i === "Cordas de arco").length, icon: PiGuitar },
+    { id: 3, name: "Cordas tangidas", items: instruments.filter(i => i === "Cordas tangidas").length, icon: PiGuitar },
+    { id: 4, name: "Percussão melódica", items: instruments.filter(i => i === "Percussão melódica").length, icon: BsMusicNoteBeamed },
+    { id: 5, name: "Percussão ritmica", items: instruments.filter(i => i === "Percussão ritmica").length, icon: PiGuitar },
+    { id: 6, name: "Teclas", items: instruments.filter(i => i === "Teclas").length, icon: PiPianoKeysFill },
+    { id: 7, name: "Madeira", items: instruments.filter(i => i === "Madeira").length, icon: TbWind },
+    { id: 8, name: "Metais", items: instruments.filter(i => i === "Metais").length, icon: PiGuitar },
+    { id: 9, name: "Áudio e acessórios", items: instruments.filter(i => i === "Áudio e acessórios").length, icon: LuMic },
 ];
+
 
 type CategoriesProps = {
     onSelectCategory: (category: string) => void;

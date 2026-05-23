@@ -46,6 +46,34 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-brand-marquee: brand-marquee 40s linear infinite;
+}
+
+@keyframes brand-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-brand-marquee {
+  animation: var(--animate-brand-marquee);
+}
+
+.brand-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-brand-marquee {
+    animation: none;
+  }
+
+  .brand-marquee-viewport {
+    overflow-x: auto;
+  }
 }
 
 html {
