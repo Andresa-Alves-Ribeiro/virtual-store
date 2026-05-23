@@ -120,7 +120,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-zinc-800 w-full">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className="text-zinc-500 text-sm text-center md:text-left">© 2026 MusicStore Pro. Todos os direitos reservados.</p>
+                        <p className="text-zinc-500 text-sm text-center md:text-left">© 2026 MusicStore. Todos os direitos reservados.</p>
 
                         <div className="flex items-center gap-4">
                             <Image src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="logo mastercard" width={40} height={40} className="h-6 opacity-50 hover:opacity-100 transition-opacity" />

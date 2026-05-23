@@ -1,3 +1,5 @@
+"use client"
+
 import catalogy from "@/app/data/catalog";
 import type { IconType } from "react-icons";
 import { BsMusicNoteBeamed } from "react-icons/bs";
@@ -14,19 +16,28 @@ type CategoriesType = {
     icon: IconType;
 };
 
+const instruments = catalogy.map((item) => (
+    item.instrument_type
+))
+
 const categories: CategoriesType[] = [
-    { id: 1, name: "Todos", items: 20, icon: GrGrid },
-    { id: 2, name: "Cordas de arco", items: 7, icon: PiGuitar },
-    { id: 3, name: "Cordas tangidas", items: 7, icon: PiGuitar },
-    { id: 4, name: "Percussão melódica", items: 4, icon: BsMusicNoteBeamed },
-    { id: 5, name: "Percussão ritmica", items: 7, icon: PiGuitar },
-    { id: 6, name: "Teclas", items: 3, icon: PiPianoKeysFill },
-    { id: 7, name: "Madeira", items: 4, icon: TbWind },
-    { id: 8, name: "Metais", items: 7, icon: PiGuitar },
-    { id: 9, name: "Áudio e acessórios", items: 2, icon: LuMic },
+    { id: 1, name: "Todos", items: instruments.length, icon: GrGrid },
+    { id: 2, name: "Cordas de arco", items: instruments.filter(i => i === "Cordas de arco").length, icon: PiGuitar },
+    { id: 3, name: "Cordas tangidas", items: instruments.filter(i => i === "Cordas tangidas").length, icon: PiGuitar },
+    { id: 4, name: "Percussão melódica", items: instruments.filter(i => i === "Percussão melódica").length, icon: BsMusicNoteBeamed },
+    { id: 5, name: "Percussão ritmica", items: instruments.filter(i => i === "Percussão ritmica").length, icon: PiGuitar },
+    { id: 6, name: "Teclas", items: instruments.filter(i => i === "Teclas").length, icon: PiPianoKeysFill },
+    { id: 7, name: "Madeira", items: instruments.filter(i => i === "Madeira").length, icon: TbWind },
+    { id: 8, name: "Metais", items: instruments.filter(i => i === "Metais").length, icon: PiGuitar },
+    { id: 9, name: "Áudio e acessórios", items: instruments.filter(i => i === "Áudio e acessórios").length, icon: LuMic },
 ];
 
-export default function Categories() {
+
+type CategoriesProps = {
+    onSelectCategory: (category: string) => void;
+};
+
+export default function Categories({ onSelectCategory }: CategoriesProps) {
     return (
         <section className="w-full flex flex-col border-b border-b-zinc-800 bg-zinc-950 px-6 py-10 md:py-12">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
@@ -48,7 +59,7 @@ export default function Categories() {
                     </div>
                 </div>
 
-                <ul
+                <div
                     className="flex w-full list-none flex-wrap justify-start gap-4"
                     aria-label="Categorias de instrumentos"
                 >
@@ -57,8 +68,11 @@ export default function Categories() {
                         const isActive = category.id === 1;
 
                         return (
-                            <li
+                            <button
                                 key={category.id}
+                                onClick={() => {
+                                    onSelectCategory(category.name)
+                                }}
                                 className={
                                     isActive
                                         ? "flex min-w-[200px] shrink-0 flex-col items-center gap-3 rounded-2xl bg-linear-to-br from-purple-600 via-purple-500 to-purple-500 px-5 py-6 text-white shadow-[0_16px_80px_-10px_rgba(217,70,239,0.55)] cursor-pointer"
@@ -90,10 +104,10 @@ export default function Categories() {
                                         {category.items} {category.items === 1 ? "item" : "itens"}
                                     </p>
                                 </div>
-                            </li>
+                            </button>
                         );
                     })}
-                </ul>
+                </div>
             </div>
         </section>
     );

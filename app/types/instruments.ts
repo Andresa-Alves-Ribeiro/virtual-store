@@ -1,4 +1,3 @@
-// app/types/instrument.ts
 export interface Instrument {
     id: number;
     image: string;
@@ -9,4 +8,5 @@ export interface Instrument {
     stars: number;
     old_price?: number;
     new_price: number;
+    is_liked?: boolean;
 }

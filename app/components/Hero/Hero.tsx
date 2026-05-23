@@ -1,7 +1,6 @@
 "use client";
 
 import { AiOutlineSafety } from "react-icons/ai";
-import { CiPlay1 } from "react-icons/ci";
 import { FaGuitar, FaHeadphones, FaMicrophone, FaRegCreditCard } from "react-icons/fa";
 import { FiTruck } from "react-icons/fi";
 import { IoMdArrowForward } from "react-icons/io";
@@ -130,14 +129,14 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className="!bg-zinc-950 flex justify-evenly p-10 border-b border-b-zinc-800">
+            <section className="bg-zinc-950! flex justify-evenly p-10 border-b border-b-zinc-800">
                 <div className="flex gap-3 items-center">
                     <div className="rounded-full bg-[#9810fa]/35 p-3">
                         <FiTruck size={24} color="#c27aff" />
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-lg">Frete Grátis</h3>
+                        <h3 className="font-bold text-lg text-white">Frete Grátis</h3>
                         <p className="text-zinc-400 text-sm">Em compras acima de R$ 500</p>
                     </div>
                 </div>
@@ -148,7 +147,7 @@ export default function Hero() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-lg">Garantia Estendida</h3>
+                        <h3 className="font-bold text-lg text-white">Garantia Estendida</h3>
                         <p className="text-zinc-400 text-sm">2 anos em todos os produtos</p>
                     </div>
                 </div>
@@ -159,7 +158,7 @@ export default function Hero() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-lg">Parcelamento</h3>
+                        <h3 className="font-bold text-lg text-white">Parcelamento</h3>
                         <p className="text-zinc-400 text-sm">Em até 12x sem juros</p>
                     </div>
                 </div>
@@ -170,7 +169,7 @@ export default function Hero() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-lg">Suporte 24/7</h3>
+                        <h3 className="font-bold text-lg text-white">Suporte 24/7</h3>
                         <p className="text-zinc-400 text-sm">Atendimento especializado</p>
                     </div>
                 </div>
