@@ -17,16 +17,20 @@ const reviews: ReviewsType[] = [
 
 export default function CustomersReview() {
     return (
-        <div className="bg-linear-to-br from-zinc-900 via-zinc-950 to-zinc-900 py-16">
-            <div className="container mx-auto max-w-7xl">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">O Que Nossos Clientes Dizem</h2>
-                    <p className="text-zinc-400 text-lg">Avaliação média: <span>4.9/5</span> baseado em 2.847 avaliações</p>
+        <div className="bg-linear-to-br from-zinc-900 via-zinc-950 to-zinc-900 px-4 py-12 sm:px-6 sm:py-16">
+            <div className="mx-auto w-full max-w-7xl">
+                <div className="mb-8 text-center sm:mb-12">
+                    <h2 className="mb-2 text-2xl font-bold text-white sm:mb-3 sm:text-3xl md:text-4xl">
+                        O Que Nossos Clientes Dizem
+                    </h2>
+                    <p className="text-base text-zinc-400 sm:text-lg">
+                        Avaliação média: <span className="text-white">4.9/5</span> baseado em 2.847 avaliações
+                    </p>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
                 {reviews.map((review, index) => (
-                        <div key={index} className="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                        <div key={index} className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 backdrop-blur-sm transition-all hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10 sm:p-8">
                             <div>
                                 <FaQuoteRight color="ad46ff" className="mb-4" size={36} />
 

@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <CartProvider>
-      <div className="flex flex-col">
+      <div className="flex min-w-0 flex-col overflow-x-hidden">
         <Header />
         <Hero />
         <MostSearched />

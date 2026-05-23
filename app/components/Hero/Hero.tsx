@@ -19,7 +19,7 @@ function scrollToCatalog() {
 export default function Hero() {
     return (
         <>
-            <section className="relative isolate flex min-h-[min(85vh,900px)] w-full items-center overflow-hidden bg-[#120A1A] py-16 md:py-24">
+            <section className="relative isolate flex min-h-[min(72vh,720px)] w-full items-center overflow-hidden bg-[#120A1A] py-12 sm:min-h-[min(80vh,840px)] sm:py-16 md:min-h-[min(85vh,900px)] md:py-24">
                 <div
                     className="absolute inset-0 -z-20 scale-105 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: "url('/store.png')" }}
@@ -31,10 +31,10 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 -z-10 bg-purple-950/40 mix-blend-multiply" aria-hidden />
 
-                <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
-                    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+                <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10">
+                    <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
                         <div className="flex max-w-3xl flex-col items-start text-left">
-                            <h1 className="font-sans text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                            <h1 className="font-sans text-4xl! font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl! md:text-6xl! lg:text-7xl!">
                                 <span className="block">
                                     Sua{" "}
                                     <span className="bg-linear-to-r from-[#F36FD7] via-[#D85AF2] to-[#9B2CF3] bg-clip-text text-transparent">
@@ -45,7 +45,7 @@ export default function Hero() {
                                 <span className="block">Melhor</span>
                             </h1>
 
-                            <p className="mb-10 mt-8 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
+                            <p className="mb-6 mt-5 max-w-xl text-sm leading-relaxed text-white/85 sm:mb-10 sm:mt-8 sm:text-base md:text-lg">
                                 Instrumentos musicais profissionais das melhores marcas do mundo. Parcelamento em até 12x
                                 sem juros e frete grátis acima de R$ 500.
                             </p>
@@ -61,7 +61,7 @@ export default function Hero() {
                                 </button>
                             </div>
 
-                            <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm font-medium text-zinc-500 md:gap-x-14">
+                            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-medium text-zinc-500 sm:mt-14 sm:gap-x-10 sm:text-sm md:gap-x-14">
                                 <span className="inline-flex items-center gap-2">
                                     <FaGuitar className="text-lg text-[#C084FC]" aria-hidden />
                                     Cordas
@@ -103,74 +103,74 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className="flex justify-center gap-14 border-t border-b border-t-purple-800 border-b-zinc-700 bg-zinc-900 p-3 text-sm">
-                <div className="flex items-center gap-2">
-                    <AiOutlineSafety size={20} color="#00c951" />
+            <section className="grid grid-cols-2 gap-3 border-t border-b border-t-purple-800 border-b-zinc-700 bg-zinc-900 px-4 py-4 text-xs sm:flex sm:flex-wrap sm:justify-center sm:gap-6 sm:px-6 sm:py-3 sm:text-sm md:gap-10 lg:gap-14">
+                <div className="flex items-center justify-center gap-2 sm:justify-start">
+                    <AiOutlineSafety size={20} color="#00c951" className="shrink-0" />
 
                     <p className="text-zinc-400">Compra 100% Segura</p>
                 </div>
 
-                <div className="flex items-center gap-2">
-                    <LiaCertificateSolid size={22} color="#f0b100" />
+                <div className="flex items-center justify-center gap-2 sm:justify-start">
+                    <LiaCertificateSolid size={22} color="#f0b100" className="shrink-0" />
 
                     <p className="text-zinc-400">Loja Certificada</p>
                 </div>
 
-                <div className="flex items-center gap-2">
-                    <FiTruck size={20} color="#2b7fff" />
+                <div className="flex items-center justify-center gap-2 sm:justify-start">
+                    <FiTruck size={20} color="#2b7fff" className="shrink-0" />
 
                     <p className="text-zinc-400">Entrega Rastreável</p>
                 </div>
 
-                <div className="flex items-center gap-2">
-                    <MdLockOutline size={22} color="#ad46ff" />
+                <div className="flex items-center justify-center gap-2 sm:justify-start">
+                    <MdLockOutline size={22} color="#ad46ff" className="shrink-0" />
 
                     <p className="text-zinc-400">Dados Protegidos SSL</p>
                 </div>
             </section>
 
-            <section className="bg-zinc-950! flex justify-evenly p-10 border-b border-b-zinc-800">
-                <div className="flex gap-3 items-center">
-                    <div className="rounded-full bg-[#9810fa]/35 p-3">
+            <section className="grid grid-cols-1 gap-6 border-b border-b-zinc-800 bg-zinc-950! p-6 sm:grid-cols-2 sm:gap-8 sm:p-8 lg:grid-cols-4 lg:gap-4 lg:p-10">
+                <div className="flex items-center md:justify-center gap-3">
+                    <div className="shrink-0 rounded-full bg-[#9810fa]/35 p-2.5 sm:p-3">
                         <FiTruck size={24} color="#c27aff" />
                     </div>
 
-                    <div>
-                        <h3 className="font-bold text-lg text-white">Frete Grátis</h3>
-                        <p className="text-zinc-400 text-sm">Em compras acima de R$ 500</p>
+                    <div className="min-w-0">
+                        <h3 className="text-base font-bold text-white sm:text-lg">Frete Grátis</h3>
+                        <p className="text-sm text-zinc-400">Em compras acima de R$ 500</p>
                     </div>
                 </div>
 
-                <div className="flex gap-3 items-center">
-                    <div className="rounded-full bg-[#9810fa]/35 p-3">
+                <div className="flex items-center md:justify-center gap-3">
+                    <div className="shrink-0 rounded-full bg-[#9810fa]/35 p-2.5 sm:p-3">
                         <AiOutlineSafety size={24} color="#c27aff" />
                     </div>
 
-                    <div>
-                        <h3 className="font-bold text-lg text-white">Garantia Estendida</h3>
-                        <p className="text-zinc-400 text-sm">2 anos em todos os produtos</p>
+                    <div className="min-w-0">
+                        <h3 className="text-base font-bold text-white sm:text-lg">Garantia Estendida</h3>
+                        <p className="text-sm text-zinc-400">2 anos em todos os produtos</p>
                     </div>
                 </div>
 
-                <div className="flex gap-3 items-center">
-                    <div className="rounded-full bg-[#9810fa]/35 p-3">
+                <div className="flex items-center md:justify-center gap-3">
+                    <div className="shrink-0 rounded-full bg-[#9810fa]/35 p-2.5 sm:p-3">
                         <FaRegCreditCard size={24} color="#c27aff" />
                     </div>
 
-                    <div>
-                        <h3 className="font-bold text-lg text-white">Parcelamento</h3>
-                        <p className="text-zinc-400 text-sm">Em até 12x sem juros</p>
+                    <div className="min-w-0">
+                        <h3 className="text-base font-bold text-white sm:text-lg">Parcelamento</h3>
+                        <p className="text-sm text-zinc-400">Em até 12x sem juros</p>
                     </div>
                 </div>
 
-                <div className="flex gap-3 items-center">
-                    <div className="rounded-full bg-[#9810fa]/35 p-3">
+                <div className="flex items-center md:justify-center gap-3">
+                    <div className="shrink-0 rounded-full bg-[#9810fa]/35 p-2.5 sm:p-3">
                         <FaHeadphones size={24} color="#c27aff" />
                     </div>
 
-                    <div>
-                        <h3 className="font-bold text-lg text-white">Suporte 24/7</h3>
-                        <p className="text-zinc-400 text-sm">Atendimento especializado</p>
+                    <div className="min-w-0">
+                        <h3 className="text-base font-bold text-white sm:text-lg">Suporte 24/7</h3>
+                        <p className="text-sm text-zinc-400">Atendimento especializado</p>
                     </div>
                 </div>
             </section>

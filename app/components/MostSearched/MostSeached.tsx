@@ -4,10 +4,10 @@ import weeklyHighlights from "@/app/data/weekly-highlights";
 
 export default function MostSearched() {
     return (
-        <section className="w-full bg-zinc-900 px-6 py-10 md:px-10 md:py-12">
-            <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        <section className="w-full bg-zinc-900 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
+            <div className="mx-auto flex w-full max-w-7xl items-start justify-between gap-4 sm:items-center">
                 <div>
-                    <h2 className="text-2xl font-extrabold tracking-tight text-white md:text-3xl">
+                    <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl md:text-3xl">
                         Destaques da Semana
                     </h2>
                     <p className="mt-2 text-sm text-zinc-400 md:text-base">
